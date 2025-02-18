@@ -1,0 +1,23 @@
+name: Build and Update README.md
+
+on:
+  push:
+    paths:
+      - '_profile/**'
+      - 'BASE.md'
+      - 'OOPS.ms**'
+      - 'scripts/build.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-lastest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/build.js
+      - run: |
+          git add README.md
+          git commit -m 'Auto-build and update README [skip ci]' || exit 0
+          git push
