@@ -6,6 +6,8 @@
 
 <!-- BEGIN -->
 
+<!-- INCLUDE:about -->
+
 <!-- END -->
 
 <!---
