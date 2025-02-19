@@ -1,5 +1,5 @@
 <!-- STATUS:draft -->
-<!-- DEFINE_SECTION:about -->
+<!-- DEFINE:about -->
 # About-Me
-<!-- START_SECTION:about -->
-<!-- END_SECTION:about -->
+<!-- START:about -->
+<!-- END:about -->

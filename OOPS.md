@@ -1,5 +1,5 @@
-<!-- DEFINE_SECTION:fallback -->
-<!-- START_SECTION:fallback -->
+<!-- DEFINE:fallback -->
+<!-- START:fallback -->
 <div align="center">
   <div>
     <img
@@ -22,4 +22,4 @@
     />
   </div>
 </div>
-<!-- END_SECTION:fallback -->
+<!-- END:fallback -->
