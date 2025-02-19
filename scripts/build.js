@@ -19,18 +19,18 @@ template = template.replace(/<!-- INCLUDE:(\w+) -->/g, (match, name) => {
     if (fs.existsSync(file)) {
         const content = fs.readFileSync(file, 'utf-8');
         if (content.includes('<!-- STATUS:ready -->')) {
-            const pattern = new RegExp(`<!-- DEFINE:\s*${name}\s* -->([\s\S]*?)<!-- END:\s*${name}\s* -->`, 'm');
+            const pattern = new RegExp(`<!-- DEFINE_SECTION:\s*${name}\s* -->([\s\S]*?)<!-- END_SECTION:\s*${name}\s* -->`, 'm');
             const match = content.match(pattern);
             messages.push({
                 type: 'success',
-                text: `✔️ ${name}: found`
+                text: `✔️ '${name}' found.`
             });
             return match && match[1] ? match[1].trim() : content.trim();
-        } else { error = 'not ready' }
+        } else { error = 'not ready yet' }
     } else { error = 'not found' }
     messages.push({
         type: 'fail',
-        text: `❌ ${name}: ${error}`
+        text: `❌ '${name}' ${error}.`
     });
     return '';
 });
@@ -40,13 +40,18 @@ if (messages.length == 0 || fails.length > 0) { template = fallback };
 if (fails.length > 0) {
     messages.push({
         type: 'fail',
-        text: `❌ Failed to load assets`
+        text: `❌ Unable to build README.`
     })
     messages.sort((a, b) => (a.type == 'success' ? -1 : 1));
     const lines = messages.map(message => `${encodeURIComponent(message.text)}`).join(';');
     const height = messages.length * 25;
     const URL = `https://readme-typing-svg.demolab.com?font=Noto+Sans&size=14&duration=1&pause=1500&color=9198A1&vCenter=true&multiline=true&repeat=false&width=400&height=${height}&lines=${lines}`;
-    template += `\n\n<div align="center"><img src="${URL}" alt="Typing SVG" /></div>`;
+    template += (`
+        <br>
+        <div align="center">
+            <img src="${URL}" alt="Typing SVG" />
+        </div>
+    `);
 };
 
 fs.writeFileSync(readme, template);
