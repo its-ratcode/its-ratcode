@@ -7,6 +7,18 @@
 <!-- BEGIN -->
 
 
+<!-- INCLUDE:header -->
+
+<!-- INCLUDE:about -->
+
+<!-- INCLUDE:tools -->
+
+<!-- INCLUDE:achievements -->
+
+<!-- INCLUDE:projects -->
+
+<!-- INCLUDE:footer -->
+
 
 <!-- END -->
 
