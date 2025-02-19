@@ -23,3 +23,8 @@
   </div>
 </div>
 <!-- END_SECTION:fallback -->
+        <br>
+        <div align="center">
+            <img src="https://readme-typing-svg.demolab.com?font=Noto+Sans&size=14&duration=1&pause=1500&color=9198A1&vCenter=true&multiline=true&repeat=false&width=400&height=175&lines=%E2%9D%8C%20'header'%20not%20found.;%E2%9D%8C%20'about'%20not%20ready%20yet.;%E2%9D%8C%20'tools'%20not%20found.;%E2%9D%8C%20'achievements'%20not%20found.;%E2%9D%8C%20'projects'%20not%20found.;%E2%9D%8C%20'footer'%20not%20found.;%E2%9D%8C%20Unable%20to%20build%20README." alt="Typing SVG" />
+        </div>
+    
