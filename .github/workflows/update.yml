@@ -21,8 +21,8 @@ jobs:
           node-version: '20'
       - run: node scripts/build.js
       - run: |
-          git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "README Builder"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git add README.md
           git commit -m 'Auto-build and update README [skip ci]' || exit 0
           git push
